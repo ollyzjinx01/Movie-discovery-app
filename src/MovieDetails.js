@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
+
 const MovieDetails = () => {
   const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
@@ -32,14 +33,14 @@ const MovieDetails = () => {
     return <div>Loading...</div>;
   }
 
+  const { title, release_date, overview, runtime } = movieDetails;
+
   return (
     <div className="movie-details">
-      <h2 data-testid="movie-title">{movieDetails.title}</h2>
-      <p data-testid="movie-release-date">
-        Release Date: {movieDetails.release_date}
-      </p>
-      <p data-testid="movie-runtime">Runtime: {movieDetails.runtime} minutes</p>
-      <p data-testid="movie-overview">{movieDetails.overview}</p>
+      <h2 data-testid="movie-title">{title}</h2>
+      <p data-testid="movie-release-date">{release_date}</p>
+      <p data-testid="movie-runtime">{runtime} minutes</p>
+      <p data-testid="movie-overview">{overview}</p>
       <button onClick={toggleFavorite} className={isFavorite ? "favorite" : ""}>
         <FontAwesomeIcon
           icon={faHeart}
