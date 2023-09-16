@@ -24,7 +24,7 @@ const MovieCard = ({
       </div>
 
       <div>
-        <h3
+        <p
           style={{
             width: "250px",
             color: "#ffffff", // Bright color (white in this case)
@@ -38,7 +38,7 @@ const MovieCard = ({
           data-testid="movie-title"
         >
           {Title}
-        </h3>
+        </p>
       </div>
 
       <div>
