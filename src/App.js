@@ -21,7 +21,7 @@ const App = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        `${API_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
+        `${API_URL}/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`
       );
       const data = await response.json();
       setMovies(data.results.slice(0, 10));
