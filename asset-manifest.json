@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Movie-discovery-app/static/css/main.59afa68b.css",
-    "main.js": "/Movie-discovery-app/static/js/main.b5535e76.js",
+    "main.js": "/Movie-discovery-app/static/js/main.bed4e542.js",
     "index.html": "/Movie-discovery-app/index.html",
     "static/media/search.svg": "/Movie-discovery-app/static/media/search.b7d007194fd177709d63428156819b2f.svg",
     "main.59afa68b.css.map": "/Movie-discovery-app/static/css/main.59afa68b.css.map",
-    "main.b5535e76.js.map": "/Movie-discovery-app/static/js/main.b5535e76.js.map"
+    "main.bed4e542.js.map": "/Movie-discovery-app/static/js/main.bed4e542.js.map"
   },
   "entrypoints": [
     "static/css/main.59afa68b.css",
-    "static/js/main.b5535e76.js"
+    "static/js/main.bed4e542.js"
   ]
 }
