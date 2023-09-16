@@ -36,6 +36,7 @@ const MovieDetails = () => {
 
   return (
     <div className="movie-details">
+      <h1>{movieDetails.title}</h1>
       <h2 data-testid="movie-title">{movieDetails.title}</h2>
       <p data-testid="movie-release-date">{movieDetails.release_date}</p>
       <p data-testid="movie-runtime">{movieDetails.runtime}</p>

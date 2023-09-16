@@ -11,10 +11,6 @@ const MovieCard = ({
   return (
     <div className="movie" key={tmdbID} data-testid="movie-card">
       <div>
-        <p>{Year}</p>
-      </div>
-
-      <div>
         <img
           src={posterUrl}
           alt={Title}
@@ -30,23 +26,23 @@ const MovieCard = ({
       <div>
         <h3
           style={{
-            width: "250px",
-            color: "#ffffff",
+            color: "#ffffff", // Bright color (white in this case)
             fontFamily: "DM Sans",
             fontSize: "18px",
             fontStyle: "normal",
             fontWeight: 700,
             lineHeight: "normal",
-            marginTop: "10px",
+            marginTop: "10px", // Add some space between poster and title
           }}
           data-testid="movie-title"
         >
           {Title}
         </h3>
+      </div>
 
+      <div>
         <p
           style={{
-            width: "250px",
             color: "var(--gray-900, #111827)",
             fontFamily: "DM Sans",
             fontSize: "18px",
@@ -60,7 +56,6 @@ const MovieCard = ({
         </p>
       </div>
 
-      {/* Add a Link to see movie details */}
       <Link to={`/movies/${tmdbID}`}>
         <button>See Details</button>
       </Link>
