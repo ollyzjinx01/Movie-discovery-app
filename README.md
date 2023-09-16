@@ -1,3 +1,33 @@
+# Movie Discovery - Movie Discovery Web Application
+
+Movie discovery is a movie discovery web application that allows users to search for movies, view movie details, and save their favorite movies.
+
+## Getting Started
+
+These instructions will help you set up and run the project on your local machine.
+
+### Prerequisites
+
+Before you begin, make sure you have the following installed on your machine:
+
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/) package manager
+
+### Installing Dependencies
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/Movie-discovery-app.git
+Navigate to the project directory
+Install the project dependencies using npm or yarn
+
+## Usage
+Use the search bar to search for movies by title.
+Click on a movie poster to view movie details.
+On the movie details page, you can click the heart icon to add the movie to your favorites.
+Your favorites can be managed on a separate page (not implemented).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -9,7 +39,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3002/movies/346698] to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
