@@ -33,10 +33,9 @@ body {
   transform: scale(1.1);
 }
 .favorite .fa-heart {
-  font-size: 24px; /* Adjust the size of the heart icon */
+  font-size: 25px; /* Adjust the size of the heart icon */
   transition: transform 0.2s ease-in-out; /* Add a smooth transition */
 }
-
 
 .app {
   padding: 4rem;
