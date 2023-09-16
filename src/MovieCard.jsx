@@ -27,14 +27,13 @@ const MovieCard = ({
         <h3
           style={{
             width: "250px",
-            height: "23px",
             color: "#ffffff", // Bright color (white in this case)
             fontFamily: "DM Sans",
             fontSize: "18px",
             fontStyle: "normal",
             fontWeight: 700,
-            lineHeight: "23.44px",
-            marginTop: "10px", // Add some space between poster and title
+            lineHeight: "normal",
+            // marginTop: "10px", // Add some space between poster and title
           }}
           data-testid="movie-title"
         >
