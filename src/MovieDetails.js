@@ -13,19 +13,20 @@ const MovieDetails = () => {
     setIsFavorite(!isFavorite);
   };
 
-  useEffect(() => {
-    const fetchMovieDetails = async () => {
-      try {
-        const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${id}?api_key=411bd1a20da8c85635ddc01cd37cc229`
-        );
-        const data = await response.json();
-        setMovieDetails(data);
-      } catch (error) {
-        console.error("Error fetching movie details:", error);
-      }
-    };
+  const fetchMovieDetails = async () => {
+    try {
+      const response = await fetch(
+        `https://api.themoviedb.org/3/movie/${id}?api_key=411bd1a20da8c85635ddc01cd37cc229`
+      );
+      const data = await response.json();
+      data.release_date = new Date(data.release_date).toUTCString(); // Convert to UTC
+      setMovieDetails(data);
+    } catch (error) {
+      console.error("Error fetching movie details:", error);
+    }
+  };
 
+  useEffect(() => {
     fetchMovieDetails();
   }, [id]);
 
@@ -33,15 +34,12 @@ const MovieDetails = () => {
     return <div>Loading...</div>;
   }
 
-  const { title, release_date, overview, runtime } = movieDetails;
-  const releaseDateUTC = new Date(release_date).toUTCString();
-
   return (
     <div className="movie-details">
-      <h2 data-testid="movie-title">{title}</h2>
-      <p data-testid="movie-release-date">Release Date: {releaseDateUTC}</p>
-      <p data-testid="movie-runtime">{runtime} minutes</p>
-      <p data-testid="movie-overview">{overview}</p>
+      <h2 data-testid="movie-title">{movieDetails.title}</h2>
+      <p data-testid="movie-release-date">{movieDetails.release_date}</p>
+      <p data-testid="movie-runtime">{movieDetails.runtime} minutes</p>
+      <p data-testid="movie-overview">{movieDetails.overview}</p>
       <button onClick={toggleFavorite} className={isFavorite ? "favorite" : ""}>
         <FontAwesomeIcon
           icon={faHeart}
