@@ -34,11 +34,12 @@ const MovieDetails = () => {
   }
 
   const { title, release_date, overview, runtime } = movieDetails;
+  const releaseDateUTC = new Date(release_date).toUTCString();
 
   return (
     <div className="movie-details">
       <h2 data-testid="movie-title">{title}</h2>
-      <p data-testid="movie-release-date">{release_date}</p>
+      <p data-testid="movie-release-date">Release Date: {releaseDateUTC}</p>
       <p data-testid="movie-runtime">{runtime} minutes</p>
       <p data-testid="movie-overview">{overview}</p>
       <button onClick={toggleFavorite} className={isFavorite ? "favorite" : ""}>

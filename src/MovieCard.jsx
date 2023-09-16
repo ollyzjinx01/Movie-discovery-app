@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const MovieCard = ({
   movie: { tmdbID, Year, Poster, Title, Type, poster_path, release_date },
@@ -57,6 +58,11 @@ const MovieCard = ({
           {release_date}
         </p>
       </div>
+
+      {/* Add a Link to see movie details */}
+      <Link to={`/movies/${tmdbID}`}>
+        <button>See Details</button>
+      </Link>
     </div>
   );
 };
